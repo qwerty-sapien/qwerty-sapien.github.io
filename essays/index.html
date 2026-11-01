@@ -1,0 +1,10 @@
+---
+title: Essays
+noindex_without_posts: true
+---
+{% if site.posts.size > 0 %}
+<h1>Essays</h1>
+<ul class="posts">
+{% for post in site.posts %}<li><span class="date">{{ post.date | date: "%b %Y" }}</span><span><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>{% if post.summary %}<span class="muted summary">{{ post.summary | escape }}</span>{% endif %}</span></li>
+{% endfor %}</ul>
+{% endif %}

@@ -11,6 +11,12 @@ defaults:
       path: ""
     values:
       layout: page
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: /essays/:title/
 
 # Setting exclude replaces Jekyll's default list, so the defaults are restated.
 exclude:

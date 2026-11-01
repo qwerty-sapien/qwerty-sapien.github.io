@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title and page.url != '/' %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  {% if page.noindex_without_posts and site.posts.size == 0 %}<meta name="robots" content="noindex">{% endif %}
+  <title>{% if page.title and page.url != '/' %}{{ page.title | escape }} | {% endif %}{{ site.title }}</title>
   <link rel="icon" href="data:,">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

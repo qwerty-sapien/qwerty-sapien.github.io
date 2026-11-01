@@ -43,6 +43,23 @@ li { margin: 0.25rem 0; }
 .muted { color: rgba(0, 0, 0, 0.55); }
 .date { color: rgba(0, 0, 0, 0.55); font-variant-numeric: tabular-nums; }
 
+/* Essays: index rows (date | title) and post pages */
+.column > h1:first-child, .essay > h1:first-child { margin-top: 0; }
+.posts { list-style: none; padding: 0; margin: 0; }
+.posts li { display: grid; grid-template-columns: 90px minmax(0, 1fr); column-gap: 16px; margin: 0.5rem 0; }
+.posts .summary { display: block; font-size: 15px; }
+.essay > h1 { margin-bottom: 0.25rem; }
+.essay > .date { margin: 0 0 2rem; }
+.essay p, .essay ul, .essay ol, .essay blockquote, .essay pre { margin: 0 0 1.1rem; }
+.essay blockquote { margin-left: 0; margin-right: 0; padding-left: 1rem; border-left: 3px solid rgba(0, 0, 0, 0.15); color: rgba(0, 0, 0, 0.55); font-style: normal; }
+.essay code { font-family: monospace; font-size: 15px; }
+.essay pre { overflow-x: auto; max-width: 100%; }
+.essay img { max-width: 100%; height: auto; }
+.essay sup { line-height: 0; }
+.footnotes { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid rgba(0, 0, 0, 0.12); font-size: 15px; color: rgba(0, 0, 0, 0.55); }
+.footnotes ol { padding-left: 1.2rem; }
+.footnotes p { margin: 0 0 0.4rem; }
+
 @media (max-width: 720px) {
   .home { grid-template-columns: minmax(0, 1fr); gap: 16px; }
   .aligned-row { grid-template-columns: minmax(0, 1fr); }

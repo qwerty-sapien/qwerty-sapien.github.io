@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<main class="container column">
+<article class="essay">
+<h1>{{ page.title | escape }}</h1>
+<p class="date">{{ page.date | date: "%-d %B %Y" }}</p>
+{{ content }}
+</article>
+</main>
