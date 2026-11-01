@@ -1,0 +1,10 @@
+<nav class="navbar" aria-label="Site">
+  <div class="container">
+    <a class="brand" href="{{ '/' | relative_url }}">Mu Chuping</a>
+    <span class="nav">
+      <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active" aria-current="page"{% endif %}>Home</a>
+      {% comment %}Phase 2 adds the Research link here when research.md exists.{% endcomment %}
+      {% if site.posts.size > 0 %}<a href="{{ '/essays/' | relative_url }}"{% if page.url contains '/essays' %} class="active" aria-current="page"{% endif %}>Essays</a>{% endif %}
+    </span>
+  </div>
+</nav>

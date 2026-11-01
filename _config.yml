@@ -1,0 +1,23 @@
+# GitHub Pages native Jekyll build (github-pages gem). No theme, no plugins, no Gemfile.
+title: Mu Chuping
+url: "https://qwerty-sapien.github.io"
+baseurl: ""
+# The key must be present: omitting it makes the github-pages gem default to jekyll-theme-primer.
+theme: null
+markdown: kramdown
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+# Setting exclude replaces Jekyll's default list, so the defaults are restated.
+exclude:
+  - .planning
+  - .claude
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
