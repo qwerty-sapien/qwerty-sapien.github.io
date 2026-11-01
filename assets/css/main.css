@@ -1,0 +1,50 @@
+/* The one stylesheet for the whole site.
+   Values measured from knzhou.github.io (Hugo Academic 4.5 plus his overrides). */
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #fff;
+  color: rgba(0, 0, 0, 0.8);
+  font: 17px/1.65 Roboto, sans-serif;
+  overflow-wrap: break-word;
+}
+a { color: #2962ff; text-decoration: none; }
+a:hover { text-decoration: underline; }
+h1, h2, h3 { font-family: Montserrat, sans-serif; color: #313131; }
+h1 { font-size: 38px; font-weight: 400; line-height: 1.25; }
+h2 { font-size: 19.5px; font-weight: 600; line-height: 1.4; margin: 0 0 0.5rem; }
+h3 { font-size: 17px; font-weight: 600; margin: 1.6rem 0 0.4rem; }
+ul { padding-left: 1.2rem; }
+li { margin: 0.25rem 0; }
+
+.container { max-width: 960px; margin: 0 auto; padding: 0 15px; }
+
+/* Navbar */
+.navbar { background: #fff; box-shadow: rgba(0, 0, 0, 0.11) 0 2px 4px 0; height: 45px; }
+.navbar .container { display: flex; align-items: center; justify-content: space-between; height: 45px; }
+.brand { font-size: 20.4px; font-weight: 700; color: #2b2b2b; }
+.nav a { color: #34495e; font-size: 18px; margin-left: 1.6rem; }
+.nav a.active { color: #2962ff; }
+
+/* Home: sidebar | prose. Defined after .container; minmax(0, 1fr) stops long content widening the track. */
+.home { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 48px; padding-top: 40px; }
+.side { text-align: center; }
+.side .name { font-family: Montserrat, sans-serif; font-size: 28px; font-weight: 400; color: #313131; line-height: 1.25; margin: 0 0 0.6rem; }
+.side ul { list-style: none; padding: 0; text-align: left; display: inline-block; margin: 0 0 1.4rem; }
+.side h3 { text-align: left; margin-top: 0.4rem; }
+.side .edu { text-align: left; font-size: 15px; padding: 0; list-style: none; }
+
+/* Every other page: one centred column. A class rule after .container, so 680px wins. */
+.column { max-width: 680px; padding-top: 40px; }
+
+/* Heading | text rows, used by later pages */
+.aligned-row { display: grid; grid-template-columns: 180px minmax(0, 1fr); column-gap: 36px; margin-bottom: 2rem; }
+.muted { color: rgba(0, 0, 0, 0.55); }
+.date { color: rgba(0, 0, 0, 0.55); font-variant-numeric: tabular-nums; }
+
+@media (max-width: 720px) {
+  .home { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .aligned-row { grid-template-columns: minmax(0, 1fr); }
+  .nav a { margin-left: 0.9rem; font-size: 16px; }
+}
